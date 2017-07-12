@@ -1,7 +1,7 @@
 #puts "Milestone C1"
 #puts "I can code in VSCode and run an embedded terminal"
 
-s = "this IS a string"
+#s = "this IS a string"
 
 #puts s.reverse
 #puts s.length
@@ -29,12 +29,12 @@ s = "this IS a string"
 #my_string = "this is a string"
 #my_words = my_string.split(" ")
 #my_string_again = my_words.join(" ")
-#puts my_string == my_string_again
+# #puts my_string == my_string_again
 
-# rose_line = "roses are red"
-# violet_line = "violets are blue"
+rose_line = "roses are red"
+violet_line = "violets are blue"
 
-# def viet_hoa_dau_cau(sentence)
+# # def viet_hoa_dau_cau(sentence)
 #   sentence.capitalize
 # end
 
@@ -48,3 +48,41 @@ s = "this IS a string"
 
 # puts join_sentences("this is line 1", "this is line 2")
 
+# puts "[Task 3] make_poem:"
+# def make_poem(lines)
+#   lines.map do |c|
+#   c.capitalize + "\n"
+#   end
+# end
+
+# #puts make_poem([rose_line, violet_line])
+
+# flower_lines = ["roses are red", "violets are blue", "ruby is fun", "cool so are you"]
+# puts make_poem(flower_lines)
+
+
+def to_words(words)
+  words.split
+end
+
+#puts to_words("roses are red")
+
+#puts to_words("ruby is fun")
+
+def backwards(input)
+  input.reverse
+end
+
+#puts backwards("ruby is fun")
+
+#puts backwards("violets are blue")
+
+def make_reverse_poem(poem)
+  poem.map do |p|
+    p.split.reverse.join(" ")
+    end
+end
+
+#puts make_reverse_poem([rose_line, violet_line])
+
+puts make_reverse_poem([rose_line, violet_line, "ruby is fun", "cool so are you"])
