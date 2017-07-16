@@ -1,10 +1,11 @@
-#Ruby Todo App
+# Ruby Todo App
 
-This is a todo app.
+This is a todo app that can be used for creating and updating a bucket list.
 
-##Functions
+## Functions
 
-- display a list of tasks
-- add/remove to do tasks
-- mark tasks as done/undone
-- check if tasks have been done
+- [x] Can display your bucket list of tasks
+- [x] Can mark items as done / not done
+- [x] Can display lists of tasks that have been completed / not completed
+- [x] Can add new tasks to your bucket list
+- [x] Can remove existing tasks from your bucket list

@@ -33,12 +33,15 @@ class Todo
   end
 
   def prompt
-    puts "Enter the number of the task you'd like to mark as done/undone!\nYou can also add a new task by typing 'new' or remove an existing task by typing 'remove'.".colorize(:blue)
+    puts ("-" * 100).colorize(:blue)
+    puts "// Enter the number of the task you'd like to mark as done/undone!".colorize(:blue)
+    puts "// Add a new task by typing 'add' or remove an existing task by typing 'remove'.".colorize(:blue)
+    puts "// Type 'done' or 'undone' to see lists of done/not done tasks & 'all' to see the full list.".colorize(:blue)
     input_index = gets.chomp
     
     if input_index == "exit"
-      puts "Goodbye: come back when you've completed more bucket list tasks!"
-      "exit"
+      puts "Goodbye: come back when you've completed more bucket list tasks!".colorize(:red)
+      "exit".colorize(:red)
 
     elsif input_index == "done"
       display_done
@@ -50,9 +53,9 @@ class Todo
       display_all
 
     elsif input_index == "add"
-      puts "Please type in the task you would like to add:".colorize(:red)
+      puts "Please type in the task you would like to add:".colorize(:green)
       new_task = gets.chomp
-      puts "Ok, I've added the task #{new_task} to your bucket list".colorize(:red)
+      puts "Ok, I've added the task #{new_task} to your bucket list".colorize(:green)
       @list.add(Item.new_from_prompt(new_task))
       display
 
@@ -64,7 +67,7 @@ class Todo
       display
 
     elsif @list.items[(input_index.to_i)-1].done? == false
-      puts "Ok, I marked task number #{input_index} as done:".colorize(:red)
+      puts "Ok, I marked task number #{input_index} as done:".colorize(:green)
       @list.mark_done_at!(input_index.to_i - 1)
       display
 
@@ -81,7 +84,7 @@ end
 @todo.load_data
 @todo.display
 loop do
-  if @todo.prompt == "exit"
+  if @todo.prompt == "exit".colorize(:red)
     break
   end
 end
