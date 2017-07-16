@@ -1,0 +1,5 @@
+- [x] Learn how to dance
+- [ ] Learn how to sing
+- [x] Learn how to play the guitar
+- [x] Join a boyband
+- [ ] Become famous
