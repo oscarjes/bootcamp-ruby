@@ -20,6 +20,14 @@ class Flower
   def price
     @price
   end
+
+  def my_flower
+    @my_flower
+    end
+
+  def your_flower
+    @your_flower
+  end
 end
 
 # TEST:
@@ -37,13 +45,7 @@ your_flower.price = 11
 her_flower = Flower.new("tulips", "purple")
 her_flower.price = 79
 
-def my_flower
-  @my_flower
-end
 
-def your_flower
-  @your_flower
-end
 
 ###################
 # Task 2: add a to_sentence method inside the class
@@ -130,6 +132,7 @@ class Bouquet
       sum += add.price
     end
   p sum
+  end
 end
 
 total_price(my_bouquet)

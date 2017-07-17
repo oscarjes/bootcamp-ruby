@@ -1,0 +1,6 @@
+- [ ] Learn File Reading
+- [x] Learn Sinatra
+- [ ] Finish Current Lab
+- [ ] Add more todos
+- [x] Make dinner plans
+- [ ] Go to the gym
