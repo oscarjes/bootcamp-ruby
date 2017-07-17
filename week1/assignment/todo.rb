@@ -32,11 +32,17 @@ class Todo
     @list.display
   end
 
+  def save
+    @save
+  end
+
   def prompt
     puts ("-" * 100).colorize(:blue)
     puts "// Enter the number of the task you'd like to mark as done/undone!".colorize(:blue)
     puts "// Add a new task by typing 'add' or remove an existing task by typing 'remove'.".colorize(:blue)
     puts "// Type 'done' or 'undone' to see lists of done/not done tasks & 'all' to see the full list.".colorize(:blue)
+    puts "// Type 'save' to save your list. It will also be auto-saved when you exit the app.".colorize(:blue)
+    puts "// Type 'exit' to quit the app.".colorize(:blue)
     input_index = gets.chomp
     
     if input_index == "exit"
@@ -51,6 +57,11 @@ class Todo
 
     elsif input_index == "all"
       display_all
+
+    elsif input_index == "save"
+      save
+      puts "Your file has been saved.".colorize(:red)
+      display
 
     elsif input_index == "add"
       puts "Please type in the task you would like to add:".colorize(:green)
@@ -78,6 +89,17 @@ class Todo
     end
   end
 
+  def save
+    File.open("todo.md", "w") do |f|
+      @list.items.map do |item|
+        if item.done?
+          f.puts "- [x] #{item.name}"
+        else
+          f.puts "- [ ] #{item.name}"
+        end
+      end
+    end
+  end
 end
 
 @todo = Todo.new("todo.md")
@@ -85,6 +107,7 @@ end
 @todo.display
 loop do
   if @todo.prompt == "exit".colorize(:red)
+    @todo.save
     break
   end
 end
