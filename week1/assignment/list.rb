@@ -13,9 +13,9 @@ class List
   end
 
   def display
-    puts ("-" * 100).colorize(:blue)
-    puts "Here is your #{@name}:".colorize(:blue)
-    puts ("-" * 100).colorize(:blue)
+    puts ("-" * 100).colorize(:light_blue)
+    puts "Here is your #{@name}:".colorize(:light_blue)
+    puts ("-" * 100).colorize(:light_blue)
     @items.each_with_index do |item, index|
       if item.done?
         puts "- [x] #{item.name} (#{index + 1})".colorize(:green)
@@ -26,9 +26,9 @@ class List
   end
 
   def display_done
-    puts ("-" * 100).colorize(:blue)
-    puts "Here are your done tasks:".colorize(:blue)
-    puts ("-" * 100).colorize(:blue)
+    puts ("-" * 100).colorize(:light_blue)
+    puts "Here are your done tasks:".colorize(:light_blue)
+    puts ("-" * 100).colorize(:light_blue)
     @items.each_with_index do |item, index|
       if item.done?
         puts "- [x] #{item.name} (#{index + 1})".colorize(:green)
@@ -37,9 +37,9 @@ class List
   end
 
   def display_undone
-    puts ("-" * 100).colorize(:blue)
-    puts "Here are the tasks you haven't done yet:".colorize(:blue)
-    puts ("-" * 100).colorize(:blue)
+    puts ("-" * 100).colorize(:light_blue)
+    puts "Here are the tasks you haven't done yet:".colorize(:light_blue)
+    puts ("-" * 100).colorize(:light_blue)
     @items.each_with_index do |item, index|
       if item.done? == false
         puts "- [ ] #{item.name} (#{index + 1})".colorize(:yellow)

@@ -37,12 +37,12 @@ class Todo
   end
 
   def prompt
-    puts ("-" * 100).colorize(:blue)
-    puts "// Enter the number of the task you'd like to mark as done/undone!".colorize(:blue)
-    puts "// Add a new task by typing 'add' or remove an existing task by typing 'remove'.".colorize(:blue)
-    puts "// Type 'done' or 'undone' to see lists of done/not done tasks & 'all' to see the full list.".colorize(:blue)
-    puts "// Type 'save' to save your list. It will also be auto-saved when you exit the app.".colorize(:blue)
-    puts "// Type 'exit' to quit the app.".colorize(:blue)
+    puts ("-" * 100).colorize(:light_blue)
+    puts "// Enter the number of the task you'd like to mark as done/undone!".colorize(:light_blue)
+    puts "// Add a new task by typing 'add' or remove an existing task by typing 'remove'.".colorize(:light_blue)
+    puts "// Type 'done' or 'undone' to see lists of done/not done tasks & 'all' to see the full list.".colorize(:light_blue)
+    puts "// Type 'save' to save your list. It will also be auto-saved when you exit the app.".colorize(:light_blue)
+    puts "// Type 'exit' to quit the app.".colorize(:light_blue)
     input_index = gets.chomp
     
     if input_index == "exit"
