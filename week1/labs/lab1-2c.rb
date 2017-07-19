@@ -156,10 +156,14 @@ old_tasks = [{"name"=>"learn symbol", "priority"=>1},
 
 def symbolist(tasks)
   new_tasks = Array.new
-  tasks.map do |k|
-    p k.keys[0].to_sym
-    p k.keys[1].to_sym
+  tasks.each do |k|
+    new_task = {}
+    k.each do |key, value|
+      new_task[key.to_sym] = value
+    end
+    new_tasks << new_task
   end
+  new_tasks
 end
 
 p symbolist(old_tasks)
