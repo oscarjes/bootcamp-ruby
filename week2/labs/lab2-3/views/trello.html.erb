@@ -1,0 +1,33 @@
+<h1>Todo</h1>
+<div class="today-list">
+
+  <div class="list-header">Today</div>
+
+    <div class="sorting-icons">
+      <div id="sorting-icon">
+        <a href="/" class="done-icon">
+          <img id="done" src="/images/done_icon.png" alt="done" style="width:20px; float: right; margin-top: -23px; margin-right: 65px">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/" class="undone-icon">
+          <img id="undone" src="/images/undone_icon.png" alt="undone" style="width:20px; float: right; margin-top: -23px; margin-right: 45px">
+        </a>
+      </div>
+        <div id="sorting-icon">
+        <a href="/" class="descending-icon">
+          <img id="descending" src="/images/descending_icon.png" alt="descending" style="width:20px; float: right; margin-top: -23px; margin-right: 25px">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/" class="ascending-icon">
+          <img id ="ascending" src="/images/ascending_icon.png" alt="ascending" style="width:20px; float: right; margin-top: -23px; margin-right: 5px">
+        </a>
+      </div>
+    </div>
+
+    <% items.each do |i|%>
+      <%= erb :"_item.html", locals: {name: i[:name], done: i[:done]} %>
+    <% end %>
+  <input type="text" placeholder="Click to add task...">
+</div>

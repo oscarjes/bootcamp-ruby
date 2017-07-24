@@ -1,0 +1,19 @@
+<% if done %>
+
+<div class="item">
+  <div class="undo-button">
+    <button class="undo">Undo</button>
+  </div>
+  <div class="item-text-done"><%= name %></div>   
+</div>
+
+<% else %>
+
+<div class="item">
+  <div class="done-button">
+      <button class="done">Done</button>
+  </div>
+  <div class="item-text-undone"><%= name %></div>
+</div>
+
+<% end %>

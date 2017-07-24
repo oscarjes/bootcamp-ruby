@@ -1,0 +1,104 @@
+body{
+  margin-left: 15px;
+  margin-top: 15px;
+  background: #0079bf;
+  font-family: helvetica neue;
+}
+
+h1 {
+  color: white;
+}
+
+.today-list{
+  background-color: #e2e4e6;
+  padding: 5px;
+  width: 300px;
+  border-radius: 3px;
+}
+
+.list-header{
+  padding-left: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+.item{
+  height: 15px;
+  line-height: 15px;
+  margin: 5px;
+  padding: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+  color: #4d4d4d;
+  border-radius: 3px;
+}
+
+.item-text-done{
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #bbbbbb;
+}
+
+.item-text-undone{
+  font-size: 14px;
+}
+
+Button{
+  margin-top: -5px;
+  font-size: 13px;
+  color: white;
+  border: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  float: right;
+  margin-right: 10px;
+  text-align: center;
+  width: 45px;
+}
+
+Button.done{
+  font-size: 13px;
+  color: white;
+  background-color: #7fbcdf;
+}
+
+Button.undo{
+  font-size: 13px;
+  color: white;
+  background-color: #bbbbbb;
+}
+
+input {
+  width: 95%;
+  margin-left: 9px;
+  margin-right: 7px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #e2e4e6;
+  color: #4d4d4d;
+  border: none;
+  font-size: 14px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* img#done{
+  width:20px; 
+  float: right; 
+  margin-top: -23px; 
+  margin-right: 65px
+} */
